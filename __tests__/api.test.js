@@ -8,8 +8,9 @@ describe('API Endpoints', () => {
     // run before all tests
     beforeAll((done) => {
         // starting the server
-        server = app.listen(process.env.PORT);
-        done();
+        server = app.listen(process.env.PORT, () => {
+            done();
+        });
     })
 
     // it returns error as the user is not authenticated
