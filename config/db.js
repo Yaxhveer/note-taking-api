@@ -4,16 +4,14 @@ mongoose.set('strictQuery', true);
 mongoose.Promise = global.Promise;
 
 // connecting to the database
-export const connectDB = async () => {
-    await mongoose.connect(process.env.MONGODB_URI);
+const connectDB = async () => {
+    try {
+        const conn = await mongoose.connect(process.env.MONGODB_URI);
+        console.log(`MongoDB Connected: ${conn.connection.host}`);
+    } catch (error) {
+        console.error(`Error: ${error.message}`);
+        process.exit(1);
+    }
 };
 
-// When successfully connected
-mongoose.connection.on('connected', () => {
-    console.log('Connected to the database successfully');
-});
-
-// If the connection throws an error
-mongoose.connection.on('error', (err) => {
-    console.error(`Error connecting to database: ${err}`);
-});
+export default connectDB;
