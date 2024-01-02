@@ -1,5 +1,6 @@
 import { validationResult, body } from "express-validator"
 
+// validate POST /user/register and POST /user/login endpoints
 export const validateCreateUser = [
 
     body('name').notEmpty().withMessage('Name is required'),
@@ -15,6 +16,7 @@ export const validateCreateUser = [
     },
 ];
 
+// validate POST /note endpoint
 export const validateCreateNote = [
 
     body('title').notEmpty().withMessage('Title is required'),
@@ -29,6 +31,7 @@ export const validateCreateNote = [
     },
 ];
 
+// validate PUT /note/:id endpoint
 export const validateUpdateNote = [
 
     body('title').if(body('title').exists()).notEmpty().withMessage('Title should not be empty'),

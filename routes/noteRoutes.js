@@ -3,6 +3,7 @@ import { getAllNotes, getNote, createNote, updateNote, deleteNote } from "../con
 import { validateCreateNote, validateUpdateNote } from "../middleware/validateMiddleware.js";
 import { verifyToken } from "../middleware/authMiddleware.js";
 
+// creating router for /note
 const router = express.Router();
 
 router.get('/', getAllNotes)

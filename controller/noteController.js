@@ -1,5 +1,6 @@
 import Note from "../model/noteModel.js";
 
+// check if not exists or not
 const checkNote = (note, res) => {
     if (note === null) {
         res.status(400)

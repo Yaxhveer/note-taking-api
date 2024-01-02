@@ -1,8 +1,5 @@
 import mongoose from "mongoose";
 
-mongoose.set('strictQuery', true);
-mongoose.Promise = global.Promise;
-
 // connecting to the database
 const connectDB = async () => {
     try {
