@@ -3,7 +3,7 @@
 
 - Clone the repository.
 ```
-git clone https://github.com/Yaxhveer/note-taking-api
+git clone https://github.com/Yaxhveer/note-taking-api.git
 cd note-taking-api
 ```
 
@@ -27,4 +27,9 @@ npm install
 
 ```
 node server
+```
+- Test
+
+```
+npm test
 ```
