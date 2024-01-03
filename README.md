@@ -3,8 +3,8 @@
 
 - Clone the repository.
 ```
-git clone https://github.com/Yaxhveer/Mesh.git
-cd Mesh
+git clone https://github.com/Yaxhveer/note-taking-api
+cd note-taking-api
 ```
 
 - Create a MongoDB database and obtain the `MongoDB URI` - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas/register)
